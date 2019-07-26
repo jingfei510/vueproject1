@@ -1,0 +1,14 @@
+module.exports={
+		devServer:{
+			proxy:{
+				'/web':{
+						target:'http://localhost/vueTomcat/web',
+						changeOrigin:true,
+						ws:false,
+						pathRewrite:{
+							'^/web':''
+						}
+				}
+			}
+		}
+}
